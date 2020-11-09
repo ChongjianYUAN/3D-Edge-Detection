@@ -1,0 +1,29 @@
+<launch>
+	<param name="lidar_type" type="int" value="2"/>
+	<param name="blind" type="double" value="0.5"/>
+	<param name="inf_bound" type="double" value="10"/>
+	<param name="N_SCANS" type="int" value="16"/>
+	<param name="group_size" type="int" value="9"/>
+	<param name="disA" type="double" value="0.015"/>
+	<param name="disB" type="double" value="0.3"/>
+	<param name="p2l_ratio" type="double" value="400"/>
+	<param name="limit_maxmid" type="double" value="9"/>
+	<param name="limit_midmin" type="double" value="16"/>
+	<param name="limit_maxmin" type="double" value="3.24"/>
+	<param name="jump_up_limit" type="double" value="170.0"/>
+	<param name="jump_down_limit" type="double" value="8.0"/>
+	<param name="cos160" type="double" value="160.0"/>
+	<param name="edgea" type="double" value="2"/>
+	<param name="edgeb" type="double" value="0.1"/>
+	<param name="smallp_intersect" type="double" value="172.5"/>
+	<param name="smallp_ratio" type="double" value="1.2"/>
+	<param name="point_filter_num" type="int" value="4"/>
+  <node pkg="unity_sw_mapping" type="unity_feature" name="unity_feature" output="screen"/>
+
+	<param name="filter_parameter_corner" type="double" value="0.2" />
+  <param name="filter_parameter_surf" type="double" value="0.4" />
+  <node pkg="unity_sw_mapping" type="unity_mapping" name="unity_mapping" output="screen"/>
+	
+
+
+</launch>
